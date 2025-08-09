@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>MyName | E-Commerce Sales Analysis</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="../assets/css/main.css" />
+  <style>
+    figure {
+      margin-bottom: 2.5rem;
+    }
+    figcaption {
+      font-size: 0.9rem;
+      color: #666;
+      font-style: italic;
+      margin-top: 0.3rem;
+    }
+    section p {
+      line-height: 1.6;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+    .button {
+      margin-top: 1.5rem;
+    }
+    video {
+      max-width: 100%;
+      height: auto;
+      margin-top: 1rem;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body class="is-preload">
+  <div id="page-wrapper">
+
+    <!-- Header -->
+    <section id="header">
+      <div class="container">
+        <h1 class="project-title">E-commerce Sales Analysis</h1>
+        <nav id="nav">
+            <ul>
+              <li><a class="icon solid fa-home" href="../index.html"><span>Home</span></a></li>
+              
+              <!-- Projects with submenu -->
+              <li>
+                <a class="icon solid fa-th" href="../projects.html"><span>Projects</span></a>
+                <ul>
+                  <li><a href="ecommerce-sales-analysis.html"><span>E-Commerce Sales Analysis</span></a></li>
+                  <!-- Add more project links here -->
+                </ul>
+              </li>
+              
+              <!-- <li><a class="icon solid fa-star" href="../achievements.html"><span>Achievements</span></a></li> -->
+              <li><a class="icon solid fa-envelope" href="#footer"><span>Contact</span></a></li>
+            </ul>
+          </nav>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <section id="main">
+      <div class="container">
+
+        <article class="box post">
+          <header>
+            <h2>E-Commerce Sales Analysis & Interactive Dashboards</h2>
+            <p>End-to-end e-commerce sales data project using SQLite, Excel, and Tableau</p>
+          </header>
+
+          <!-- Project Overview -->
+          <section>
+            <h3>Product Overview</h3>
+            <p>
+              To start off my business and data analysis journey, I started with a 12-month e-commerce sales dataset from Kaggle. This was a relatively generic dataset, but I felt it was a good starting point due to the ambiguity of the information (products did not have names, months were labeled months 1 to 12 but there was no confirmation if this was Jan to Dec or a random order). I felt if I could somehow derive any sort of meaning from this, it would be a good idea of how well I would do in the real world.
+            </p>
+            <p>
+              I eventually arrived at the conclusion that I would derive 2 key dashboards that, in a hypothetical scenario, upper management or executive decision makers in the organization would want to see. This is purely based on my experience as a Business Operations Manager and someone who has spent a lot of time working in quite a variety of different fields.
+            </p>
+          </section>
+
+          <!-- Tools I Used -->
+          <section>
+            <h3>Tools I Used</h3>
+            <ol>
+              <li><strong>Excel</strong> – The data was in a CSV file, so naturally I had to read through it first before doing anything else to see if I could spot any discrepancies or any interesting patterns.</li>
+              <li><strong>SQLite</strong> – After a quick manual scan, I imported the data to SQLite to perform some data manipulation and run some queries to get an idea of what the highest sales look like, what some of the lower performing categories are, and so on.</li>
+              <li><strong>Tableau</strong> – This was my first time using Tableau and therefore this part took the longest time as I was learning through experience. I used Tableau to build charts and dashboards using the files I had exported from SQLite.</li>
+            </ol>
+          </section>
+
+          <!-- The Process -->
+          <section>
+            <h3>The Process</h3>
+            <p>
+              When I started this project, I was pretty lost on what I could actually do with this data due to the same reason that I wanted to start with it – it was pretty ambiguous. Sure, I could run random SQL queries on it all day long and get a bunch of information that may or may not matter. I could spend a lot of time building a bunch of random charts that would not make a difference in the business world. In fact, I actually did do both these things.
+            </p>
+            <p>
+              I found out a bunch of information using SQL queries that I picked up during my time solving the SQL 50 on Leetcode and as I ran more and more queries, I realized that there are insights one could actually derive from data that looks meaningless at first. One could establish the top selling categories, the top selling products, what makes these the top sellers and so on. Of course, there would be some assumptions being made in this project based on my experience and real-world statistics.
+            </p>
+            <p>
+              Originally, my Tableau project actually consisted of 10 worksheets with a variety of different charts and graphs, but as I learned to think more and more of how I would actually present something like this in a real-world scenario, I realized that there are details that high level management would really want to focus on, and details that do not need to be a priority unless asked for specifically. So I really dived deep into talking to myself as I was making this project and acting like I was presenting in front of a real management committee.
+            </p>
+            <p>
+              That’s how I ended up with the end product: 6 total worksheets divided into 2 different dashboards. One to summarize what categories were working and how much money we made, and the other to show what the best selling products were (overall and per each category), and try to find what made these the top sellers (was it their price or that they were well reviewed)? Identifying this could help push products, increase pricing on certain products to increase revenue, identify weak points and see if I could even identify any interesting insights from this data. And I did.
+            </p>
+          </section>
+
+          <!-- Detailed Insights I Gained -->
+          <section>
+            <h3>Detailed Insights I Gained</h3>
+            <ol>
+              <li><strong>Products 286 & 937</strong> — Both are top sellers but with super low price points and, as a result, very low revenue. Product 937 even has a terrible review score. So why are they selling so well? Are we losing potential customers by keeping products with poor reputation just because they move volume? Something to seriously question about long-term brand health here.</li>
+              <li><strong>Products 197 & 924</strong> — These sell well and have prices way above the average. It’s tempting to push prices higher to rake in more revenue, but without cost info, that’s a gamble. Still, high price + high sales = solid profit potential if costs are in check.</li>
+              <li><strong>Review Scores vs Sales</strong> — Surprisingly, there’s almost zero correlation between reviews and sales. This suggests either reviews don’t influence buying decisions here or something else is driving sales (like price, category, or seasonality). Worth investigating deeper with customer behavior data.</li>
+              <li><strong>Category Winners & Losers</strong> — Categories like Electronics and Home Decor dominate sales and revenue. But some low-price categories rake in lots of units without much revenue impact. The store should prioritize resources and marketing spend towards higher-margin categories instead of volume-only plays.</li>
+              <li><strong>Seasonality</strong> — The dataset only has sales_1 to sales_12 with no actual months, which doesn’t allow for any real meaningful seasonal analysis; however, I could easily assume that sales would be higher around Christmas and such holidays, but it again depends on which country the data is coming from and so on and so forth. I had originally pivoted the month axes into a format where I could see the patterns over the course of a year, but reverted back due to the lack of information. In better cases though, I would know what to do, and I feel that was a key learning point here as well.</li>
+              <li><strong>Product 306</strong> — This is a very curious product. It is one of the best sellers and revenue generators, and it’s a book priced at 488 with an extremely good review score and review count. I’d love to know what kind of book this is and what drives its success.</li>
+              <li><strong>Home and Kitchen Category</strong> — Only two products in this category’s top sellers have above-average review scores; the rest have really bad ratings. It’s also the worst-performing category overall. These factors might be related and could require some serious action to improve.</li>
+              <li><strong>Sports Category</strong> — This is the second highest revenue generator. Only three products have below-average review scores, and only four products are priced below average in their top 10. This category could potentially be expanded with a few more similar products to boost revenue, as sports products tend to be more expensive but sell well here. We should capitalize on this strength.</li>
+              <li><strong>Books Category</strong> — Generally, books show high sales volume, but product 306 carries most of the revenue. Maybe acquiring or promoting a couple more products similar to 306 could improve overall category revenue.</li>
+            </ol>
+          </section>
+          
+
+          <!-- Lessons Learned -->
+          <section>
+            <h3>Lessons I Learned</h3>
+            <ul>
+              <li>Importing CSVs into SQLite and cleaning raw data: got comfortable quickly but learned the first row isn't headers by default and had to fix that manually.</li>
+              <li>Altering tables and creating views: Learned the difference and when to create a virtual view vs changing the table schema permanently. For example, I added yearly month sales per product as a new column in the original table, but I made a new view for grouping total sales per category.</li>
+              <li>Building dual-axis charts in Tableau: This was a pain. Had to synchronize axes, fix overlapping labels, and deal with color conflicts across charts. Very good learning experience though.</li>
+              <li>Established relationships in Tableau to avoid heavy joins and ensure filters work smoothly across worksheets.</li>
+              <li>Manipulated axes to remove nonsensical negative sales values — no such thing as negative stock (unless you preorder, which isn’t in this data).</li>
+              <li>Learned to create new calculated fields like revenue (sales × price) to give context beyond just volume.</li>
+              <li>Used highlight actions in Tableau to connect charts interactively. This was a real game changer for dashboard usability, even though it’s very basic, I believe it would be a key item in corporate presentations.</li>
+              <li>Learned how to use filtering across dashboards based on a single dropdown/category selection. Saved time and increased usability.</li>
+              <li>Discovered pivoting data is essential for monthly trends analysis, even if I didn’t fully implement it here.</li>
+            </ul>
+          </section>
+
+          <!-- What Could Have Made This Better -->
+          <section>
+            <h3>What Would Have Made This Project Better</h3>
+            <ul>
+              <li>Cost Data: Without product cost or acquisition price, I can only guess at profit. Revenue numbers are nice but don’t tell the whole story.</li>
+              <li>Customer Data: No info on repeat vs one-time buyers means I can’t assess customer loyalty or lifetime value.</li>
+              <li>Actual Dates for Sales: The months are generic sales_1 to sales_12, so I can’t do real seasonal or trend analysis. That’s a big limitation.</li>
+              <li>Product Names: Products are just labeled Product + ID. That sucks for deriving anything specific — real names would’ve helped with brand/category intuition.</li>
+              <li>Marketing & Promo Data: No idea if low sales products are due to pricing issues, lack of promotion, or being brand new. Context like this would massively improve recommendations.</li>
+            </ul>
+          </section>
+
+          <!-- Final Product -->
+          <section>
+            <h3>The Final Product</h3>
+            <p>Two dashboards that actually work and tell a story:</p>
+            <ul>
+                <li>
+                  Category Overview – Gives the big picture: revenue and sales by category. And an executive overview.
+                  <figure>
+                    <img src="../images/dashboard-1.png" alt="Dashboard Screenshot 1" style="max-width:100%; height:auto;" />
+                    <figcaption>Dashboard 1: Overview of Sales & Revenue by Category</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  Top 10 Selling Products – Shows the top 10 selling products with their reviews and price points. 
+                  <figure>
+                    <img src="../images/dashboard-2.png" alt="Dashboard Screenshot 2" style="max-width:100%; height:auto;" />
+                    <figcaption>Dashboard 2: Detailed Top 10 Products Summary</figcaption>
+                  </figure>
+                </li>
+              </ul>
+            <p>Both have filters and interactivity that help stakeholders get fast answers.</p>
+            <video controls style="max-width:100%; height:auto;">
+                <source src="../videos/db1.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+          </section>
+
+          <!-- Final Thoughts -->
+          <section>
+            <h3>Final Thoughts</h3>
+            <p>
+              This project took me about 3 to 4 days overall to complete, with the finalization of the document and customizing my portfolio website taking me another couple of days. As this is my first project, I was learning Tableau alongside actually working with it, so I am quite excited to see where this leads next. I really enjoyed figuring out insights from the data, cleaning it, manipulating it and just overall working in this scenario, even if it was only hypothetical.
+            </p>
+            <p>
+              If you’ve reached this point in the document, I truly appreciate your time! I would love to connect with you on my LinkedIn (right below)!
+            </p>
+          </section>
+
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <section id="footer">
+        <div class="container">
+          <header>
+            <h2>Connect With Me!</h2>
+          </header>
+          <div class="row">
+              <div class="col-12" style="text-align: center;">
+                  <ul class="icons" style="display: inline-block; text-align: left;">
+                    <li class="icon solid fa-phone">
+                      +971 50 942 5286
+                    </li>
+                    <li class="icon solid fa-envelope">
+                      <a href="mailto:parasgh98@gmail.com">parasgh98@gmail.com</a>
+                    </li>
+                    <li class="icon brands fa-linkedin">
+                      <a href="https://linkedin.com/in/parasgh" target="_blank">linkedin.com/in/parasgh</a>
+                    </li>
+                  </ul>
+                </div>
+          </div>
+        </div>
+        <div id="copyright" class="container">
+          <ul class="links">
+            <li>&copy; PG - All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+          </ul>
+        </div>
+      </section>
+
+  </div>
+
+  <!-- Scripts -->
+  <script src="../assets/js/jquery.min.js"></script>
+  <script src="../assets/js/browser.min.js"></script>
+  <script src="../assets/js/breakpoints.min.js"></script>
+  <script src="../assets/js/util.js"></script>
+  <script src="../assets/js/main.js"></script>
+
+</body>
+</html>
