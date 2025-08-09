@@ -1,37 +1,44 @@
-Strongly Typed by HTML5 UP
-html5up.net | @ajlkn
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+# E-Commerce Sales Analysis Dashboard
 
+A data exploration and visualization project focused on uncovering key insights from e-commerce sales data. This project showcases data cleaning, SQL querying, Excel modeling, and Tableau dashboarding — all tied together into a clean, interactive presentation.
 
-This is Strongly Typed, a new site template with a minimal, semi-retro
-look (inspired by old instruction manuals) and, as you might guess from its
-name, a strong emphasis on type. It's fully responsive, built on HTML5/CSS3,
-and includes styling for all basic page elements. Demo images* are courtesy of
-regularjane, an incredibly talented photographer friend of mine. Be sure to
-check out more of her work over at deviantART:
+## 🔍 Project Overview
 
-http://regularjane.deviantart.com/
+This project was built using a sample sales dataset (CSV) from Kaggle and dives into questions like:
 
-(* = Not included! Only meant for use with my own on-site demo, so please do NOT download
-and/or use any of Jane's work without her explicit permission!)
+- What are the best-performing categories and products?
+- How do pricing and review scores influence sales?
+- Are there any anomalies or hidden opportunities?
 
-As usual, feedback, bug reports, and comments are not only welcome, but strongly
-encouraged :)
+## 📊 Tools Used
 
-AJ
-aj@lkn.io | @ajlkn
+- **SQL** – data extraction and filtering  
+- **Excel** – data cleaning and pivot analysis  
+- **Tableau** – interactive dashboards  
+- **HTML/CSS** – web presentation
 
-PS: Not sure how to get that contact form working? Give formspree.io a try (it's awesome).
+## 📈 Dashboards Included
 
+1. **Category Overview**  
+   A summary of revenue and sales across all product categories.
 
-Credits:
+2. **Top 10 Products Summary**  
+   Detailed view of the best-performing individual products with filters and visuals.
 
-	Demo Images:
-		regularjane (regularjane.deviantart.com)
+## 🔎 Key Insights
 
-	Icons:
-		Font Awesome (fontawesome.io)
+- Some low-rated products (like Product 937) still have high sales volume. Brand perception might be at risk.
+- Categories like Electronics and Sports outperform others in both revenue and volume.
+- A standout product (306 – a book) has top-tier sales, price, and reviews. Would love to know what book it is.
+- Review scores don’t strongly correlate with sales. Something else is influencing buyer behavior.
+- Books as a category depend heavily on one product. Adding more similar products could balance performance.
+- Home & Kitchen is the weakest category, and most of its top products have bad reviews. Could be connected.
+- Sports products are priced well and have solid reviews. This is a category worth expanding.
 
-	Other:
-		jQuery (jquery.com)
-		Responsive Tools (github.com/ajlkn/responsive-tools)
+## 💡 What I Learned
+
+- Manual cleaning gave me better understanding of messy datasets.
+- SQL made it easier to manipulate and segment large datasets fast.
+- Tableau helped turn raw numbers into something that actually tells a story.
+- Visual storytelling makes technical insights much easier to share with non-technical people.
+- Finding anomalies is often where the best insights are hiding.
