@@ -112,19 +112,26 @@
 
           <!-- Detailed Insights I Gained -->
           <section>
-            <h3>Detailed Insights I Gained</h3>
-            <ol>
-              <li><strong>Products 286 & 937</strong> — Both are top sellers but with super low price points and, as a result, very low revenue. Product 937 even has a terrible review score. So why are they selling so well? Are we losing potential customers by keeping products with poor reputation just because they move volume? Something to seriously question about long-term brand health here.</li>
-              <li><strong>Products 197 & 924</strong> — These sell well and have prices way above the average. It’s tempting to push prices higher to rake in more revenue, but without cost info, that’s a gamble. Still, high price + high sales = solid profit potential if costs are in check.</li>
-              <li><strong>Review Scores vs Sales</strong> — Surprisingly, there’s almost zero correlation between reviews and sales. This suggests either reviews don’t influence buying decisions here or something else is driving sales (like price, category, or seasonality). Worth investigating deeper with customer behavior data.</li>
-              <li><strong>Category Winners & Losers</strong> — Categories like Electronics and Home Decor dominate sales and revenue. But some low-price categories rake in lots of units without much revenue impact. The store should prioritize resources and marketing spend towards higher-margin categories instead of volume-only plays.</li>
-              <li><strong>Seasonality</strong> — The dataset only has sales_1 to sales_12 with no actual months, which doesn’t allow for any real meaningful seasonal analysis; however, I could easily assume that sales would be higher around Christmas and such holidays, but it again depends on which country the data is coming from and so on and so forth. I had originally pivoted the month axes into a format where I could see the patterns over the course of a year, but reverted back due to the lack of information. In better cases though, I would know what to do, and I feel that was a key learning point here as well.</li>
-              <li><strong>Product 306</strong> — This is a very curious product. It is one of the best sellers and revenue generators, and it’s a book priced at 488 with an extremely good review score and review count. I’d love to know what kind of book this is and what drives its success.</li>
-              <li><strong>Home and Kitchen Category</strong> — Only two products in this category’s top sellers have above-average review scores; the rest have really bad ratings. It’s also the worst-performing category overall. These factors might be related and could require some serious action to improve.</li>
-              <li><strong>Sports Category</strong> — This is the second highest revenue generator. Only three products have below-average review scores, and only four products are priced below average in their top 10. This category could potentially be expanded with a few more similar products to boost revenue, as sports products tend to be more expensive but sell well here. We should capitalize on this strength.</li>
-              <li><strong>Books Category</strong> — Generally, books show high sales volume, but product 306 carries most of the revenue. Maybe acquiring or promoting a couple more products similar to 306 could improve overall category revenue.</li>
-            </ol>
-          </section>
+          <h3>Detailed Insights I Gained</h3>
+          <ol>
+            <li><strong>Products 286 & 937</strong> — Both are top sellers but with super low price points and, as a result, very low revenue. Product 937 even has a terrible review score. So why are they selling so well? Are we losing potential customers by keeping products with poor reputation just because they move volume? Something to seriously question about long-term brand health here.</li>
+
+            <li><strong>Products 197 & 924</strong> — These sell well and have prices way above the average. It’s tempting to push prices higher to rake in more revenue, but without cost info, that’s a gamble. Still, high price plus high sales equals solid profit potential if costs are in check.</li>
+
+            <li><strong>Review Scores vs Sales</strong> — Surprisingly, there’s almost zero correlation between reviews and sales. This suggests either reviews don’t influence buying decisions here, or something else is driving sales (like price, category, or seasonality). Worth investigating deeper with customer behavior data.</li>
+
+            <li><strong>Category Quality vs. Performance</strong> — Home & Kitchen is the worst-performing category overall, with both the lowest sales volume and revenue. Even within its top 10 selling products, only two have above-average review scores. The rest are rated poorly. This points to possible product quality or relevance issues that may be driving customers away and hurting performance.</li>
+
+            <li><strong>Seasonality</strong> — The dataset only has sales_1 to sales_12 with no actual months, which doesn’t allow for any real seasonal analysis. I had originally pivoted the data to try identifying patterns over the year but reverted back due to lack of proper time labeling. In a real-world case, having actual date data would be crucial. Still, this process taught me how I’d approach seasonal analysis when more information is available.</li>
+
+            <li><strong>Product 306</strong> — This is a very curious product. It’s one of the top sellers and revenue generators, and it’s a book priced at 488 with an extremely strong review score and count. I’d love to know what kind of book this is and what drives its success. Replicating that could be valuable.</li>
+
+            <li><strong>Sports Category</strong> — This is the second-highest revenue-generating category. Only three products have below-average review scores, and only four are priced below average in the top 10. Sports seems to hit the right balance of pricing, quality, and demand. It may be worth expanding this category to boost revenue further.</li>
+
+            <li><strong>Books Category</strong> — Books show high unit sales, but revenue is disproportionately carried by product 306. Introducing or promoting a couple of similar high-priced, high-rated products could lift the overall revenue performance for this category.</li>
+          </ol>
+        </section>
+
           
 
           <!-- Lessons Learned -->
