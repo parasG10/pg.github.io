@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Steam Games Analysis</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="../assets/css/main.css" />
+  <style>
+    figure {
+      margin-bottom: 2.5rem;
+    }
+    figcaption {
+      font-size: 0.9rem;
+      color: #666;
+      font-style: italic;
+      margin-top: 0.3rem;
+    }
+    section p {
+      line-height: 1.6;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+    }
+    .button {
+      margin-top: 1.5rem;
+    }
+    video {
+      max-width: 100%;
+      height: auto;
+      margin-top: 1rem;
+      border-radius: 8px;
+    }
+    .dashboard-grid {
+      display: block;
+    }
+    @media (min-width: 768px) {
+      .dashboard-grid {
+        display: block;
+      }
+    }
+    .dashboard-item {
+      background: #f9f9f9;
+      padding: 1rem;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      width: 100%;
+    }
+    .dashboard-item h4 {
+      margin-top: 0;
+      color: #333;
+    }
+    .placeholder-img {
+      width: 100%;
+      height: 300px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border-radius: 8px;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    .dashboard-img {
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+    .dashboard-img:hover {
+      transform: scale(1.02);
+    }
+  </style>
+</head>
+<body class="is-preload">
+  <div id="page-wrapper">
+
+    <!-- Header -->
+    <section id="header">
+      <div class="container">
+        <h1 class="project-title">Steam Games Analysis</h1>
+        <nav id="nav">
+            <ul>
+              <li><a class="icon solid fa-home" href="../index.html"><span>Home</span></a></li>
+              
+              <!-- Projects with submenu -->
+              <li>
+                <a class="icon solid fa-th" href="../projects.html"><span>Projects</span></a>
+                <ul>
+                  <li><a href="ecommerce-sales-analysis.html"><span>E-Commerce Sales Analysis</span></a></li>
+                  <li><a href="steam-games-analysis.html"><span>Steam Games Analysis</span></a></li>
+                  <!-- Add more project links here -->
+                </ul>
+              </li>
+              
+              <!-- <li><a class="icon solid fa-star" href="../achievements.html"><span>Achievements</span></a></li> -->
+              <li><a class="icon solid fa-envelope" href="#footer"><span>Contact</span></a></li>
+            </ul>
+          </nav>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <section id="main">
+      <div class="container">
+
+        <article class="box post">
+          <header>
+            <h2>Steam Games Industry Analysis Dashboard</h2>
+            <p>Complete gaming industry analysis using Python web scraping and advanced Excel analytics</p>
+          </header>
+
+          <!-- Project Overview -->
+          <section>
+            <h3>Project Overview</h3>
+            <p>
+              This comprehensive gaming industry analysis project combines Python web scraping with advanced Excel analytics to decode Steam's marketplace dynamics. Using data from 481 Steam games, I built an end-to-end pipeline that reveals genre performance, publisher efficiency, and revenue patterns across the gaming industry.
+            </p>
+            <p>
+              What started as a technical challenge became a deep dive into gaming industry economics. The project required solving complex data quality issues, developing proxy metrics for unreliable data, and creating interactive dashboards that translate technical analysis into actionable business insights for gaming industry stakeholders.
+            </p>
+          </section>
+
+          <!-- Technical Implementation -->
+          <section>
+            <h3>Technical Implementation</h3>
+            <h4>Data Collection & Processing</h4>
+            <ul>
+              <li><strong>Python Web Scraping Pipeline:</strong> Custom scraper integrating Steam Store API, store page scraping for ownership data, and Steam Reviews API for comprehensive game metadata</li>
+              <li><strong>Data Quality Management:</strong> Identified and corrected unrealistic ownership estimates (trillions in revenue) by pivoting to recommendation counts as reliable proxy metrics</li>
+              <li><strong>Multi-source Integration:</strong> Combined pricing, reviews, ownership estimates, and metadata across 481 games with robust error handling and rate limiting</li>
+            </ul>
+            
+            <h4>Advanced Excel Analytics</h4>
+            <ul>
+              <li><strong>Power Query Transformations:</strong> Complex data cleaning including date standardization, multi-value field expansion, and category filtering</li>
+              <li><strong>Three-Sheet Architecture:</strong> Raw data preservation, cleaned single-game analysis, and exploded multi-row format for granular insights</li>
+              <li><strong>Interactive Dashboard Design:</strong> Professional Steam-branded styling with cross-dashboard filtering and dynamic calculations</li>
+            </ul>
+          </section>
+
+          <!-- Key Insights -->
+          <section>
+            <h3>Key Business Insights & Gaming Industry Analysis</h3>
+            
+            <h4>Genre Performance Dynamics</h4>
+            <ul>
+              <li><strong>Action Genre Dominance:</strong> 21.9M average users and AED 1,511.5M revenue confirm historical gaming preferences, but Sports/Racing underperforming below Casual games suggests platform-specific audience differences</li>
+              <li><strong>Premium Strategy Validation:</strong> Strategy and Simulation genres show higher revenue per user, indicating successful premium pricing opportunities for complex gameplay experiences</li>
+              <li><strong>Market Maturation Indicators:</strong> 178 Indie games represent largest category by volume but lower individual revenue, showing market democratization trends</li>
+            </ul>
+
+            <h4>Publisher & Developer Intelligence</h4>
+            <ul>
+              <li><strong>Efficiency Leaders:</strong> Larian Studios emerged as most efficient publisher with highest revenue-to-game ratio, demonstrating quality-over-quantity approach success</li>
+              <li><strong>Platform Advantage:</strong> Valve's dominance as developer makes sense given platform ownership, but absence from revenue rankings reflects free-to-play focus with microtransaction models</li>
+              <li><strong>Surprise Performers:</strong> Feral Interactive's high ranking reveals successful cross-platform porting strategy, showing value in technical specialization over original development</li>
+            </ul>
+
+            <h4>Market Dynamics & Trends</h4>
+            <ul>
+              <li><strong>Review-Sales Disconnect:</strong> Minimal correlation between review scores and commercial success indicates marketing, pricing, and brand recognition drive purchases more than user ratings</li>
+              <li><strong>Rapid Success Patterns:</strong> Black Myth: Wukong's top 10 recommendation status despite recent release shows how exceptional titles can achieve mainstream breakthrough in traditionally niche genres</li>
+              <li><strong>Historical Context Validation:</strong> 2018-2020 peak in game releases aligns with industry golden age including major titles and pandemic gaming boom</li>
+            </ul>
+          </section>
+
+          <!-- Interactive Dashboards -->
+          <section>
+            <h3>Interactive Dashboard System</h3>
+            
+            <div class="dashboard-item" style="margin-bottom: 2rem;">
+              <h4>Game Analysis Dashboard</h4>
+              <figure>
+                <a href="../images/gamedb.png" target="_blank">
+                  <img src="../images/gamedb.png" alt="Game Analysis Dashboard" class="dashboard-img" />
+                </a>
+                <figcaption>Dashboard 1: Game Performance & Rankings</figcaption>
+              </figure>
+              <p>Individual game performance analysis featuring top performers by recommendations and revenue, Steam vs Metacritic score comparisons, and release timeline trends. Interactive filtering enables deep-dive analysis of specific games and performance patterns.</p>
+            </div>
+            
+            <div class="dashboard-item" style="margin-bottom: 2rem;">
+              <h4>Genre Analysis Dashboard</h4>
+              <figure>
+                <a href="../images/genredb.png" target="_blank">
+                  <img src="../images/genredb.png" alt="Genre Analysis Dashboard" class="dashboard-img" />
+                </a>
+                <figcaption>Dashboard 2: Genre Performance Metrics</figcaption>
+              </figure>
+              <p>Comprehensive genre performance breakdown showing game count distribution, average ownership by genre, and total revenue generation. Reveals market opportunities and audience preferences across different game categories.</p>
+            </div>
+            
+            <div class="dashboard-item" style="margin-bottom: 2rem;">
+              <h4>Publisher & Developer Analysis Dashboard</h4>
+              <figure>
+                <a href="../images/devpubdb.png" target="_blank">
+                  <img src="../images/devpubdb.png" alt="Publisher & Developer Dashboard" class="dashboard-img" />
+                </a>
+                <figcaption>Dashboard 3: Publisher Efficiency & Market Share</figcaption>
+              </figure>
+              <p>Publisher efficiency analysis with revenue rankings, market share distribution, and developer productivity metrics. Features bubble chart visualization showing relationship between game count, average revenue, and total market impact for strategic industry insights.</p>
+            </div>
+          </section>
+
+          <!-- Technical Challenges -->
+          <section>
+            <h3>Technical Challenges & Solutions</h3>
+            
+            <h4>Data Quality & Reliability Issues</h4>
+            <p>The biggest challenge emerged when initial ownership data produced unrealistic revenue figures in the trillions. Rather than accepting flawed data, I conducted thorough validation and pivoted to recommendation counts as a more reliable proxy metric. This decision required rebuilding significant portions of the analysis but resulted in business-relevant insights.</p>
+            
+            <h4>Complex Data Structure Management</h4>
+            <p>Games with multiple genres, developers, and categories created data complexity requiring careful architecture. I implemented a three-sheet system: preserved raw data for reference, cleaned single-row format for game-level insights, and exploded multi-row format for category analysis. This structure enabled accurate analysis without double-counting while maintaining data integrity.</p>
+            
+            <h4>Excel Performance Optimization</h4>
+            <p>Handling 481 games across multiple attributes pushed Excel's limits. I optimized performance through strategic use of Power Query for heavy transformations, pre-scaled large numbers to avoid formatting issues, and designed modular dashboards that balance interactivity with performance. The result is professional-grade analytics entirely within Excel's ecosystem.</p>
+          </section>
+
+          <!-- Personal Gaming Insights -->
+          <section>
+            <h3>Gaming Industry Perspective</h3>
+            <p>As both an analyst and gamer, several findings challenged my expectations:</p>
+            
+            <ul>
+              <li><strong>Genre Surprises:</strong> Sports and Racing performing below Casual games contradicted expectations about dedicated fanbases, highlighting platform-specific audience differences</li>
+              <li><strong>Rapid Market Shifts:</strong> Black Myth: Wukong's immediate success in traditionally niche Souls-like category demonstrates how exceptional execution can break genre boundaries</li>
+              <li><strong>Data Limitations Impact:</strong> Missing major titles like Dota 2 from the dataset would significantly skew free-to-play analysis, emphasizing importance of comprehensive data collection in industry analysis</li>
+              <li><strong>Platform Dynamics:</strong> GTA V Legacy's removal from active sale corrupting revenue analysis shows how platform changes affect historical market research</li>
+            </ul>
+          </section>
+
+          <!-- Project Impact -->
+          <section>
+            <h3>Project Impact & Business Value</h3>
+            <h4>Demonstrable Skills</h4>
+            <ul>
+              <li>End-to-end data pipeline development from web scraping to interactive dashboards</li>
+              <li>Advanced Excel mastery including Power Query, pivot tables, and professional dashboard design</li>
+              <li>Data quality management and proxy metric development for unreliable data sources</li>
+              <li>Industry domain knowledge application to validate and contextualize technical findings</li>
+              <li>Business insight translation from complex technical analysis</li>
+            </ul>
+
+            <h4>Real-World Applications</h4>
+            <p>This analysis framework could be applied to competitive intelligence, market entry decisions, publisher partnership evaluations, and genre-specific investment strategies in the gaming industry. The methodology demonstrates capability to handle ambiguous data sources and extract actionable insights for strategic decision-making.</p>
+          </section>
+
+          <!-- Final Thoughts -->
+          <section>
+            <h3>Project Outcome</h3>
+            <p>
+              This 5-day intensive project represents a significant evolution from my first e-commerce analysis. Where that project taught me foundational skills, this gaming industry analysis demonstrates mastery of complex data challenges, industry-specific insights, and advanced analytical techniques. The combination of technical execution and gaming domain knowledge produces insights that pure data analysis alone couldn't achieve.
+            </p>
+            <p>
+              The project validates my capability to work with imperfect, real-world data sources while maintaining analytical rigor and business relevance. Most importantly, it shows the critical thinking required to recognize when data is misleading and the judgment to develop better approaches - exactly the skills needed for senior analytical roles in dynamic industries.
+            </p>
+          </section>
+
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <section id="footer">
+        <div class="container">
+          <header>
+            <h2>Connect With Me!</h2>
+          </header>
+          <div class="row">
+              <div class="col-12" style="text-align: center;">
+                  <ul class="icons" style="display: inline-block; text-align: left;">
+                    <li class="icon solid fa-phone">
+                      +971 50 942 5286
+                    </li>
+                    <li class="icon solid fa-envelope">
+                      <a href="mailto:parasgh98@gmail.com">parasgh98@gmail.com</a>
+                    </li>
+                    <li class="icon brands fa-linkedin">
+                      <a href="https://linkedin.com/in/parasgh" target="_blank">linkedin.com/in/parasgh</a>
+                    </li>
+                  </ul>
+                </div>
+          </div>
+        </div>
+        <div id="copyright" class="container">
+          <ul class="links">
+            <li>&copy; PG - All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+          </ul>
+        </div>
+      </section>
+
+  </div>
+
+  <!-- Scripts -->
+  <script src="../assets/js/jquery.min.js"></script>
+  <script src="../assets/js/browser.min.js"></script>
+  <script src="../assets/js/breakpoints.min.js"></script>
+  <script src="../assets/js/util.js"></script>
+  <script src="../assets/js/main.js"></script>
+
+</body>
+</html>
