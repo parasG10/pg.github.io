@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Classification Models & Marketing Predictions</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="../assets/css/main.css" />
+  <style>
+    figure {
+      margin-bottom: 2.5rem;
+    }
+    figcaption {
+      font-size: 0.9rem;
+      color: #666;
+      font-style: italic;
+      margin-top: 0.3rem;
+    }
+    section p {
+      line-height: 1.6;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+    }
+    .button {
+      margin-top: 1.5rem;
+    }
+    .dashboard-item {
+      background: #f9f9f9;
+      padding: 1rem;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+    .dashboard-item h4 {
+      margin-top: 0;
+      color: #333;
+    }
+    .dashboard-img {
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+    .dashboard-img:hover {
+      transform: scale(1.02);
+    }
+  </style>
+</head>
+<body class="is-preload">
+  <div id="page-wrapper">
+ 
+    <!-- Header -->
+    <section id="header">
+      <div class="container">
+        <h1 class="project-title">Classification Models & Marketing Predictions</h1>
+        <nav id="nav">
+          <ul>
+            <li><a class="icon solid fa-home" href="../index.html"><span>Home</span></a></li>
+            <li>
+              <a class="icon solid fa-th" href="../projects.html"><span>Projects</span></a>
+              <ul>
+                <li><a href="ecommerce-sales-analysis.html"><span>E-Commerce Sales Analysis</span></a></li>
+                <li><a href="steam-games-analysis.html"><span>Steam Games Analysis</span></a></li>
+                <li><a href="classification-models.html"><span>Classification Models</span></a></li>
+              </ul>
+            </li>
+            <li><a class="icon solid fa-envelope" href="#footer"><span>Contact</span></a></li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+ 
+    <!-- Main Content -->
+    <section id="main">
+      <div class="container">
+ 
+        <article class="box post">
+          <header>
+            <h2>Applying Classification Models to a Real-World Marketing Problem</h2>
+            <p>Machine learning project using Orange, built during MSc Business Analytics at the University of Nottingham</p>
+          </header>
+ 
+          <!-- Project Overview -->
+          <section>
+            <h3>Project Overview</h3>
+            <p>
+              This was my first proper introduction to machine learning, and it came with a twist I didn't expect: most of it was done without writing a single line of code. The tool we used was Orange, a visual node-based data analysis platform that makes building and comparing ML models surprisingly intuitive.
+            </p>
+            <p>
+              Going in, I expected this to be the most technically intimidating thing I had done so far on the MSc. Coming out, I was genuinely surprised by how accessible it made the whole process and honestly how much fun I had with it. If you've ever been put off by machine learning because of the code side of things, Orange is worth looking at.
+            </p>
+            <p>
+              The brief was straightforward: given a dataset from a bank's previous marketing campaign, build a model that could predict which customers were most likely to subscribe to a new financial product, while minimising wasted calls to people who wouldn't convert.
+            </p>
+          </section>
+ 
+          <!-- Tools -->
+          <section>
+            <h3>Tools I Used</h3>
+            <p>
+              <strong>Orange</strong> was used for everything: data exploration, model building, evaluation and comparison. The node-based interface meant I could focus on the analytical thinking rather than getting stuck on syntax. You connect nodes together to build a workflow and can see results update in real time as you tweak things. It genuinely made the whole process feel like play at times.
+            </p>
+ 
+            <div class="dashboard-item">
+              <h4>The Orange Workflow</h4>
+              <figure>
+                <a href="../images/orange2.png" target="_blank">
+                  <img src="../images/orange2.png" alt="Orange workflow diagram" class="dashboard-img" />
+                </a>
+                <figcaption>The full Orange workflow used to build, compare and evaluate the three classification models</figcaption>
+              </figure>
+              <p>This workflow tells the whole story of the modelling process. Data comes in on the left, gets preprocessed, feeds into three different models, and the results get compared on the right. No code, just nodes.</p>
+            </div>
+          </section>
+ 
+          <!-- The Process -->
+          <section>
+            <h3>The Process</h3>
+            <p>
+              Before touching any models, I spent time actually understanding the dataset. With 4,000 records and 17 features, there was a lot to unpack. Some early findings were genuinely surprising.
+            </p>
+            <p>
+              Students had nearly a 1 in 2 success rate for subscribing to the product. That was not something I expected going in. People with active housing loans were noticeably less likely to convert. And whether someone had subscribed in a previous campaign turned out to be the single strongest predictor of future behaviour by quite a margin: around 80% of previous subscribers converted again for the new product.
+            </p>
+            <p>
+              From there I built a decision tree to explore which features were actually driving outcomes before moving into the model comparison stage. I compared three classification models: Logistic Regression, k-Nearest Neighbours (kNN) and Random Forest. Each one was tested and adjusted across multiple experiments to find the most optimal version.
+            </p>
+          </section>
+ 
+          <!-- Key Insight -->
+          <section>
+            <h3>The Most Interesting Finding</h3>
+            <p>
+              This is where it got genuinely interesting. At first glance, Logistic Regression looked like the better model. It had fewer false positives, meaning fewer wasted calls to people who wouldn't convert. On paper, that seems like the right answer given the brief.
+            </p>
+            <p>
+              But when I looked at the confusion matrix properly, the picture changed. The Random Forest model identified over 100 more customers who would have actually converted. The Logistic Regression model was missing them entirely. When you think about what that means in a real business context, the revenue from those extra conversions far outweighs the cost of a few extra calls.
+            </p>
+            <p>
+              That was the key lesson: performance metrics only tell part of the story. The business context is just as important as the numbers themselves.
+            </p>
+ 
+            <div class="dashboard-item">
+              <h4>Model Comparison: Confusion Matrix</h4>
+              <figure>
+                <a href="../images/orange1.png" target="_blank">
+                  <img src="../images/orange1.png" alt="Confusion matrix comparison between models" class="dashboard-img" />
+                </a>
+                <figcaption>Confusion matrix comparison across the three models. Random Forest had significantly more true positives despite a slightly higher false positive count.</figcaption>
+              </figure>
+              <p>The difference in true positives between Random Forest (271) and Logistic Regression (157) was the deciding factor. More than 100 extra correctly identified customers is a significant business impact, especially when the cost of a wasted call is relatively low.</p>
+            </div>
+          </section>
+ 
+          <!-- Other Key Findings -->
+          <section>
+            <h3>Other Key Findings</h3>
+            <ul>
+              <li><strong>Previous campaign outcome</strong> was by far the strongest predictor. 80% of customers who subscribed to a previous product said yes to the new one too.</li>
+              <li><strong>Students and retired people</strong> were the highest converting job categories. Students especially, at nearly 1 in 2, which surprised everyone I imagine.</li>
+              <li><strong>Housing loans</strong> had a clear negative effect. Customers with active loans were significantly less likely to subscribe, suggesting financial pressure plays a role.</li>
+              <li><strong>Spacing campaigns</strong> roughly two months apart showed better results than contacting people too frequently. There is a sweet spot worth paying attention to.</li>
+              <li><strong>Call duration</strong> had a strong correlation with success but could not be used as a predictive feature since you only know how long a call was after it has ended.</li>
+            </ul>
+          </section>
+ 
+          <!-- Lessons Learned -->
+          <section>
+            <h3>Lessons I Learned</h3>
+            <p>
+              The obvious one is getting comfortable with Orange, which happened pretty quickly. The node-based approach rewards curiosity and you can iterate fast without worrying about breaking anything.
+            </p>
+            <p>
+              The more important lesson was learning how to think about model selection from a business angle rather than just chasing the best accuracy score. Precision, recall and the confusion matrix all mean something different depending on what the business actually cares about. In this case, missing a potential customer was worse than making a few extra calls.
+            </p>
+            <p>
+              I also got a lot out of the data exploration phase before any models were built. Spending time with the data first meant I understood why the models were making the decisions they were, rather than just accepting the output blindly.
+            </p>
+          </section>
+ 
+          <!-- What Could Be Better -->
+          <section>
+            <h3>What Would Have Made This Project Better</h3>
+            <ul>
+              <li><strong>A real cost-benefit figure</strong> for wasted calls versus converted customers would have made the final recommendation much more concrete. I assumed conversion revenue outweighs call cost, which seems reasonable, but actual numbers would have nailed it.</li>
+              <li><strong>More data on successful customers</strong> would likely have reduced the false negative rate on the Random Forest model. The dataset was heavily imbalanced with only 20% successful outcomes.</li>
+              <li><strong>Tracking campaign outcomes properly</strong> was flagged as a major gap. Around 80% of previous campaign outcomes in the dataset were listed as unknown, which limited how much that feature could actually help the model.</li>
+            </ul>
+          </section>
+ 
+          <!-- Final Thoughts -->
+          <section>
+            <h3>Final Thoughts</h3>
+            <p>
+              This was one of those projects where the tool genuinely shaped how I thought about the problem. Orange removed the barrier of code and let me focus on the analysis itself, which for a first ML project was exactly what I needed. The fact that it was still rigorous enough to produce meaningful, comparable results made it even better.
+            </p>
+            <p>
+              I came out of it wanting to go deeper into both the models themselves and how you translate their outputs into real decisions. Which I suppose is the best outcome for any project like this.
+            </p>
+            <p>
+              If you want to discuss the full findings or methodology, feel free to reach out on LinkedIn below. Happy to chat!
+            </p>
+          </section>
+ 
+        </article>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <section id="footer">
+        <div class="container">
+          <header>
+            <h2>Connect With Me!</h2>
+          </header>
+          <div class="row">
+              <div class="col-12" style="text-align: center;">
+                  <ul class="icons" style="display: inline-block; text-align: left;">
+                    <li class="icon solid fa-phone">
+                      +971 50 942 5286
+                    </li>
+                    <li class="icon solid fa-envelope">
+                      <a href="mailto:parasgh98@gmail.com">parasgh98@gmail.com</a>
+                    </li>
+                    <li class="icon brands fa-linkedin">
+                      <a href="https://linkedin.com/in/parasgh" target="_blank">linkedin.com/in/parasgh</a>
+                    </li>
+                  </ul>
+                </div>
+          </div>
+        </div>
+        <div id="copyright" class="container">
+          <ul class="links">
+            <li>&copy; PG - All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+          </ul>
+        </div>
+      </section>
+
+  </div>
+
+  <!-- Scripts -->
+  <script src="../assets/js/jquery.min.js"></script>
+  <script src="../assets/js/browser.min.js"></script>
+  <script src="../assets/js/breakpoints.min.js"></script>
+  <script src="../assets/js/util.js"></script>
+  <script src="../assets/js/main.js"></script>
+
+</body>
+</html>
