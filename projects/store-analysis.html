@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Classification Models & Marketing Predictions</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="../assets/css/main.css" />
+  <style>
+    figure {
+      margin-bottom: 2.5rem;
+    }
+    figcaption {
+      font-size: 0.9rem;
+      color: #666;
+      font-style: italic;
+      margin-top: 0.3rem;
+    }
+    section p {
+      line-height: 1.6;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+    }
+    .button {
+      margin-top: 1.5rem;
+    }
+    .dashboard-item {
+      background: #f9f9f9;
+      padding: 1rem;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+    .dashboard-item h4 {
+      margin-top: 0;
+      color: #333;
+    }
+    .dashboard-img {
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+    .dashboard-img:hover {
+      transform: scale(1.02);
+    }
+  </style>
+</head>
+<body class="is-preload">
+  <div id="page-wrapper">
+ 
+    <!-- Header -->
+    <section id="header">
+      <div class="container">
+        <h1 class="project-title">Classification Models & Marketing Predictions</h1>
+        <nav id="nav">
+          <ul>
+            <li><a class="icon solid fa-home" href="../index.html"><span>Home</span></a></li>
+            <li>
+              <a class="icon solid fa-th" href="../projects.html"><span>Projects</span></a>
+              <ul>
+                <li><a href="ecommerce-sales-analysis.html"><span>E-Commerce Sales Analysis</span></a></li>
+                <li><a href="steam-games-analysis.html"><span>Steam Games Analysis</span></a></li>
+                <li><a href="classification-models.html"><span>Classification Models</span></a></li>
+                <li><a href="store-analysis.html"><span>Store Performance Analysis</span></a></li>
+              </ul>
+            </li>
+            <li><a class="icon solid fa-envelope" href="#footer"><span>Contact</span></a></li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+ 
+    <!-- Main Content -->
+      <section id="main">
+        <div class="container">
+
+        <article class="box post">
+        <header>
+          <h2>Store Performance Analysis and Marketing Recommendation</h2>
+          <p>Group coursework project, MSc Business Analytics, University of Nottingham</p>
+        </header>
+
+        <!-- Coursework note -->
+        <section>
+          <p>
+            <strong>Note:</strong> This is a short excerpt from a group coursework project. Dataset details and the full report are not shared in line with coursework guidance. 
+            If you would like more detail on the SQL, methodology, or full findings, feel free to reach out.
+          </p>
+        </section>
+
+        <!-- Overview -->
+        <section>
+          <h3>Overview</h3>
+          <p>
+            We were asked to recommend which one of four stores should receive additional marketing budget. The goal was not to pick the best-performing store,
+            but the one with the most potential for improvement.
+          </p>
+          <p>
+            Our group evaluated store performance using customer and revenue metrics. I focused on customer behaviour, specifically retention and acquisition patterns.
+          </p>
+        </section>
+
+        <!-- My role -->
+        <section>
+          <h3>My Contribution</h3>
+          <p>
+            I analysed customer retention and acquisition across all stores using SQL and built the supporting visuals in Tableau. 
+            I developed monthly churn and new customer growth metrics, which became key inputs into the final recommendation.
+          </p>
+          <p>
+            The aim was to understand not just how each store was performing, but why.
+          </p>
+        </section>
+
+        <!-- Tools -->
+        <section>
+          <h3>Tools</h3>
+          <ul>
+            <li><strong>SQL</strong> for data extraction and KPI calculation</li>
+            <li><strong>Tableau</strong> for dashboarding and visual storytelling</li>
+            <li><strong>Excel</strong> for supporting analysis</li>
+          </ul>
+        </section>
+
+        <!-- Key Insight -->
+        <section>
+          <h3>Key Insight</h3>
+          <p>
+            One store, Birmingham, showed a very different pattern compared to the others. It had the highest churn rate in the dataset, peaking at around 54%,
+            well above the company average of roughly 37%.
+          </p>
+          <p>
+            However, its new customer growth rate remained broadly in line with the other stores, including the strongest performer. This was the key insight.
+            The store was not struggling to attract customers, but it was struggling to retain them.
+          </p>
+          <p>
+            That difference matters. A weak store would show both low growth and high churn. Birmingham only showed one side of that problem, which suggests
+            a fixable issue rather than a failing location.
+          </p>
+
+          <div class="dashboard-item">
+            <h4>Monthly Churn Rate (%) by Store</h4>
+            <figure>
+              <a href="../images/das1.png" target="_blank" rel="noopener">
+                <img src="../images/das1.png" alt="Monthly churn rate by store" class="dashboard-img" />
+              </a>
+              <figcaption>
+                Birmingham consistently records the highest churn, often above the company average, pointing to a clear retention issue.
+              </figcaption>
+            </figure>
+            <p>
+              This makes the problem visible over time and shows that the issue is persistent rather than a one-off spike.
+            </p>
+          </div>
+
+          <div class="dashboard-item">
+            <h4>Monthly New Customer Growth Rate (%) by Store</h4>
+            <figure>
+              <a href="../images/das2.png" target="_blank" rel="noopener">
+                <img src="../images/das2.png" alt="Monthly growth rate by store" class="dashboard-img" />
+              </a>
+              <figcaption>
+                Despite high churn, Birmingham's growth trend is similar to other stores, indicating demand is still present.
+              </figcaption>
+            </figure>
+            <p>
+              When viewed together, these charts show that the issue is retention, not acquisition.
+            </p>
+          </div>
+        </section>
+
+        <!-- Recommendation -->
+        <section>
+          <h3>Recommendation</h3>
+          <p>
+            Our group recommended focusing marketing investment on Birmingham. While it underperforms on headline metrics, it offers the strongest upside.
+          </p>
+          <ul>
+            <li>Customers are still being acquired at a normal rate</li>
+            <li>Retention is the main bottleneck</li>
+            <li>Improving loyalty could significantly increase customer lifetime value</li>
+          </ul>
+          <p>
+            This makes it a stronger candidate for intervention than already well-performing stores, where gains from additional marketing are likely to be smaller.
+          </p>
+        </section>
+
+        <!-- Reflection -->
+        <section>
+          <h3>What I Took Away</h3>
+          <p>
+            This project changed how I think about performance analysis. The most valuable insight was not identifying the best store, but identifying where
+            there is a clear and solvable gap.
+          </p>
+          <p>
+            Combining churn and growth made it possible to diagnose the problem properly, rather than just describe it.
+          </p>
+        </section>
+
+        <!-- Contact -->
+        <section>
+          <h3>Want to see more?</h3>
+          <p>
+            I am happy to share more details on the SQL logic, dashboard design, or the full report on request.
+          </p>
+        </section>
+      </article>
+
+  
+
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <section id="footer">
+        <div class="container">
+          <header>
+            <h2>Connect With Me!</h2>
+          </header>
+          <div class="row">
+              <div class="col-12" style="text-align: center;">
+                  <ul class="icons" style="display: inline-block; text-align: left;">
+                    <li class="icon solid fa-phone">
+                      +971 50 942 5286 / +44 7789 407046
+                    </li>
+                    <li class="icon solid fa-envelope">
+                      <a href="mailto:parasgh98@gmail.com">parasgh98@gmail.com</a>
+                    </li>
+                    <li class="icon brands fa-linkedin">
+                      <a href="https://linkedin.com/in/parasgh" target="_blank">linkedin.com/in/parasgh</a>
+                    </li>
+                  </ul>
+                </div>
+          </div>
+        </div>
+        <div id="copyright" class="container">
+          <ul class="links">
+            <li>&copy; PG - All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+          </ul>
+        </div>
+      </section>
+
+  </div>
+
+  <!-- Scripts -->
+  <script src="../assets/js/jquery.min.js"></script>
+  <script src="../assets/js/browser.min.js"></script>
+  <script src="../assets/js/breakpoints.min.js"></script>
+  <script src="../assets/js/util.js"></script>
+  <script src="../assets/js/main.js"></script>
+
+</body>
+</html>
